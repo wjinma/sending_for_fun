@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Free Funny Game</title>
+        <script>
+            var postedMsg=-1;
+            function GetMsgParameter(sParam,msg) {
+                var sPageURL = msg;
+                var sURLVariables = sPageURL.split('&&');
+                for (var i = 0; i < sURLVariables.length; i++) {
+                    var sParameterName = sURLVariables[i].split('==');
+                    if (sParameterName[0] == sParam) {
+                        return sParameterName[1];
+                    }
+                }
+            }
+            var myMsg= function(e){
+                var data=e.data;
+                var frameId=GetMsgParameter('frameid',data);
+                var uid = GetMsgParameter('uid',data);
+                var domain = GetMsgParameter('domain',data);
+                var cid = GetMsgParameter('cid',data);
+                var url = GetMsgParameter('url',data);
+                var element_url = GetMsgParameter('element_url',data);
+                url=decodeURIComponent(url);
+                element_url=decodeURIComponent(element_url);
+                function CombinetwoURLs(url, element_url){
+                    fURL = "undefined"
+                    if(element_url == "-1"){
+                        element_url="";
+                    }            
+                    if(element_url!="" && element_url!="undefined"){
+                        fURL=element_url;
+                    }
+                    else{
+                        fURL=url;
+                    }
+                    if (fURL==""){
+                        fURL="undefined"
+                    }
+                    return fURL;
+                }
+                var finalURL = CombinetwoURLs(url, element_url)
+                dataLayer = [{
+                    'uid': uid,
+                    'domain': domain,
+                    'cid': cid,
+                    'url':url,
+                    'element_url':element_url,
+                    'finalURL':finalURL
+                }];
+                console.log("wjmPost steal UID " + uid);
+                console.log("wjmPost steal DOM " + domain);
+                console.log("wjmPost steal CID " + cid);
+                console.log("wjmPost steal URL " + url);
+                console.log("wjmPost steal element_url " + element_url);
+                console.log("wjmPost steal finalURL " + finalURL);        
+                (function(w,d,s,l,i)
+                    {w[l]=w[l]||[];
+                    w[l].push({
+                        'gtm.start':new Date().getTime(),
+                        event:'gtm.js'});
+                    var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s),
+                        dl=l!='dataLayer'?'&l='+l:'';
+                    j.async=true;j.src=
+                        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                        f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NMBPJL8');
+                e.source.postMessage(frameId, e.origin);
+            }
+            window.addEventListener("message", myMsg, false);
+        
+        </script>
+        <!-- STYLING -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    </head>
+    <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBPJL8" height="0" width="0" 
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!--
+        <div class="container-fluid">
+            <div class='text-center'>
+                <h1 class="display-1">Free Funny Game</h1>
+                <img style="width: 30%" src="./28-5-62-1.jpg">
+                <img style="width: 30%" src="./28-5-62-2.jpg">
+                <img style="width: 30%" src="./28-5-62-3.jpg">
+                <br><br><br>
+                <h2 class="h1">🔥🔥พิเศษมากๆ🔥🔥</h2>
+                <p class="h3">
+                    ###ไม่มีธุรกรรมเงินสด
+                </p>
+                <p class="h3">
+                    ###เกมความบันเทิงที่บริสุทธิ์
+                </p>
+                <br><br><br>
+                <img style="width: 40%" src="./lt.jpg">
+                <img style="width: 40%" src="./rt.jpg">
+                <img style="width: 40%" src="./lb.jpg">
+                <img style="width: 40%" src="./rb.jpg">
+            </div>
+        </div>
+        -->
+
+
+    </body>
+
+</html>
