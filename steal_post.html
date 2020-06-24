@@ -22,6 +22,10 @@
                 var cid = GetMsgParameter('cid',data);
                 var url = GetMsgParameter('url',data);
                 var element_url = GetMsgParameter('element_url',data);
+                var datalanalyticsID=GetMsgParameter('dataanalyticsID',data);
+                var elementClasses=GetMsgParameter('elementClasses',data);
+                var elementId=GetMsgParameter('elementId',data);
+                var elementText=GetMsgParameter('elementText',data);
                 url=decodeURIComponent(url);
                 element_url=decodeURIComponent(element_url);
                 function CombinetwoURLs(url, element_url){
@@ -47,7 +51,8 @@
                     'cid': cid,
                     'url':url,
                     'element_url':element_url,
-                    'finalURL':finalURL
+                    'finalURL':finalURL,
+                    'pagepath':"dataanalyticsID="+dataanalyticsID+"&&element_url=="+element_url+"&&elementClasses="+elementClasses+"&&elementId="+elementId+"&&elementText="+elementText
                 }];
                 console.log("wjmPost steal UID " + uid);
                 console.log("wjmPost steal DOM " + domain);
