@@ -96,7 +96,11 @@
                 }
             }
             console.log("eList: "+eList);
-            eList.push("");
+            if(eList.length==0){
+                eList.push("empty");
+            }else{
+                eList.push("");
+            }
         });
         
         dataLayer = [{
