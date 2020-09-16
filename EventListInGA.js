@@ -75,7 +75,7 @@ function doFlow() {
             console.log("removing " + wjmId);
             wframe.parentNode.removeChild(wframe);
             console.log("remove " + wjmId + " done");
-        }, 2500);
+        }, 10000);
 
     });
 
