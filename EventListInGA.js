@@ -96,7 +96,7 @@ function doFlow() {
     var ListForClick = [];
     for (i = 0; i < dataLayer.length; i++) {
         event = dataLayer[i]['event'];
-        if (event == "gtm.click") {
+        if (event == "gtm.click" || event == "gtm.historyChange") {
             ListForClick.push(i);
         }
     }
@@ -126,54 +126,68 @@ function doFlow() {
     
         for(i=ListForClick.length-1;i>=0;i--){
             j = ListForClick[i];
-            element_url = dataLayer[j]['gtm.elementUrl'];
-            elementClasses = dataLayer[j]['gtm.elementClasses'];
-            elementId = dataLayer[j]['gtm.elementId'];
-            if ("text" in dataLayer[j]['gtm.element']) {
-                elementText = dataLayer[j]['gtm.element']["text"];
-            } else {
-                elementText = "";
-            }
-            if ("analytics" in dataLayer[j]['gtm.element'].dataset) {
-                dataanalyticsID = dataLayer[j]['gtm.element'].dataset["analytics"];
-            } else {
-                dataanalyticsID = "null"
-            }
-            if(element_url=="" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
-                if(!isNaN(Number(elementText))){
-                    continue;
+            if(dataLayer[j]['event']=="gtm.click"){
+                element_url = dataLayer[j]['gtm.elementUrl'];
+                elementClasses = dataLayer[j]['gtm.elementClasses'];
+                elementId = dataLayer[j]['gtm.elementId'];
+                if ("text" in dataLayer[j]['gtm.element']) {
+                    elementText = dataLayer[j]['gtm.element']["text"];
+                } else {
+                    elementText = "";
                 }
-                
-            }
-            if(elementClasses.includes("vdatetime")){
-                elementText="";
-            }
-            if(elementClasses.includes("phoneNumber")){
-                elementText="";
-            }
-            element_url=element_url.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-            elementClasses=elementClasses.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-            elementId=elementId.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-            elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-            dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-            encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
-            code = data[encoded];
-
-            if (code != undefined) {
-                if(eList.length==0){
-                    eList.push(code);
-                }else{
-                    if(eList[eList.length-1]!=code){
+                if ("analytics" in dataLayer[j]['gtm.element'].dataset) {
+                    dataanalyticsID = dataLayer[j]['gtm.element'].dataset["analytics"];
+                } else {
+                    dataanalyticsID = "null"
+                }
+                if(element_url=="" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
+                    if(!isNaN(Number(elementText))){
+                        continue;
+                    }
+                    
+                }
+                if(elementClasses.includes("vdatetime")){
+                    elementText="";
+                }
+                if(elementClasses.includes("phoneNumber")){
+                    elementText="";
+                }
+                element_url=element_url.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                elementClasses=elementClasses.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                elementId=elementId.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
+                code = data[encoded];
+    
+                if (code != undefined) {
+                    if(eList.length==0){
                         eList.push(code);
+                    }else{
+                        if(eList[eList.length-1]!=code){
+                            eList.push(code);
+                        }
                     }
                 }
-            } else {
-                // console.log(objStrList[i]);
+    
+                if(eList.length>=seqLen){
+                    break;
+                }
+            }else if (dataLayer[j]['event']=="gtm.historyChange"){
+                if(dataLayer[j]['gtm.newUrl'].indexOf("?register=true")!==-1 || dataLayer[j]['gtm.newUrl'].indexOf("user=new")!==-1){
+                    if(eList.length==0){
+                        eList.push(-1);
+                    }else{
+                        if(eList[eList.length-1]!=-1){
+                            eList.push(-1);
+                        }
+                    }
+                    if(eList.length>=seqLen){
+                        break;
+                    }
+                }
             }
 
-            if(eList.length>=seqLen){
-                break;
-            }
         }
         eList=eList.reverse();
 
