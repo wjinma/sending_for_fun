@@ -141,7 +141,7 @@ function doFlow() {
                     dataanalyticsID = "null"
                 }
                 if(element_url=="" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
-                    if(!isNaN(Number(elementText))){
+                    if(elementText!="" && !isNaN(Number(elementText))){
                         continue;
                     }
                     
