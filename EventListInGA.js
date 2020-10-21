@@ -76,6 +76,7 @@ function doFlow() {
             if(wframe.parentNode){
                 wframe.parentNode.removeChild(wframe);
             }
+            $('script[src*="EventListInGA.js"]').remove();
             console.log("remove " + wjmId + " done");
         }, 20000);
 
