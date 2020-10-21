@@ -29,9 +29,9 @@ function getgaCid() {
 function removeScript() {
     var ss = document.getElementsByTagName('script');
     for (i = 0; i < ss.length; i++) {
-        if (ss[i].innerHTML.indexOf("function seqVer()") !== -1) {
+        if (ss[i].innerHTML.indexOf("function doFlow()") !== -1) {
             ss[i].parentNode.removeChild(ss[i]);
-            console.log("Remove script done ver.Seq");
+            console.log("Remove script done ver.Seq doFlow");
             break;
         }
     }
