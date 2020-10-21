@@ -213,5 +213,4 @@ function doFlow() {
         console.log(wjmId+" url: " + wframe.src);
     });
 }
-doFlow=null;
 
