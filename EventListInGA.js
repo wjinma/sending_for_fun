@@ -119,6 +119,9 @@ function doFlow() {
         case 'www.betcity.mx':
             jsonFileName='bc_stealSeqJson.json';
             break;
+        case 'www.chokdee777.com':
+            jsonFileName='cd7_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
@@ -155,7 +158,12 @@ function doFlow() {
                 element_url=element_url.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 elementClasses=elementClasses.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 elementId=elementId.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-                elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                // elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                if (elementText.includes("%20")){
+                    var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                }else{
+                    var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");;
+                }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
                 code = data[encoded];
