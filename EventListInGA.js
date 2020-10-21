@@ -102,7 +102,6 @@ function doFlow() {
     }
 
     var jsonFileName='';
-    console.log(window.location.hostname)
     switch (window.location.hostname) {
         case 'www.wwluck.com':
             jsonFileName='wwl_stealSeqJson.json';
