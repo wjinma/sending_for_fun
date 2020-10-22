@@ -97,7 +97,7 @@ function doFlow() {
     var seqLen = 10;
     var ListForClick = [];
     for (i = 0; i < dataLayer.length; i++) {
-        event = dataLayer[i]['event'];
+        var event = dataLayer[i]['event'];
         if (event == "gtm.click" || event == "gtm.historyChange") {
             ListForClick.push(i);
         }
