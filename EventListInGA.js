@@ -135,8 +135,8 @@ function doFlow() {
                 element_url = dataLayer[j]['gtm.elementUrl'];
                 elementClasses = dataLayer[j]['gtm.elementClasses'];
                 elementId = dataLayer[j]['gtm.elementId'];
-                if ("text" in dataLayer[j]['gtm.element']) {
-                    elementText = dataLayer[j]['gtm.element']["text"];
+                if ("innerText" in dataLayer[j]['gtm.element']) {
+                    elementText = dataLayer[j]['gtm.element']["innerText"].replaceAll('\n',' ');
                 } else {
                     elementText = "";
                 }
