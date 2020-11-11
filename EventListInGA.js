@@ -205,6 +205,9 @@ function doFlow() {
                         var re=RegExp('\\d+\\.\\d+','g');
                         tmp_text=tmp_text.replace(re,"-RAND-");
                     }
+                    else{
+                        tmp_text=tmp_text.replace(/ /g,"%20");
+                    }
                     console.log("tmp_text2 " + tmp_text);
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");                
