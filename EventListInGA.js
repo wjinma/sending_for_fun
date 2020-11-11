@@ -176,14 +176,11 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
-                    console.log("elementClasses1 " + elementClasses);
                     if(elementClasses.includes("winner")||elementClasses.includes("rank")){
-                        console.log("elementClasses1 " + elementClasses);
                         tmp_text=tmp_text.replace(/%20/g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
                         tmp_text=tmp_text.replace(re,"-RAND-");
                     }
-                    console.log("tmp_text1 " + tmp_text);
                 }else{
                     var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                     var re=new RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g');
@@ -198,9 +195,7 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
-                    console.log("elementClasses2 " + elementClasses);
                     if(elementClasses.includes("winner")||elementClasses.includes("rank")){
-                        console.log("elementClasses2 " + elementClasses);
                         tmp_text=tmp_text.replace(/ /g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
                         tmp_text=tmp_text.replace(re,"-RAND-");
@@ -208,7 +203,6 @@ function doFlow() {
                     else{
                         tmp_text=tmp_text.replace(/ /g,"%20");
                     }
-                    console.log("tmp_text2 " + tmp_text);
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");                
                 encoded=encodeObj(element_url, elementClasses, elementId, tmp_text, dataanalyticsID);
