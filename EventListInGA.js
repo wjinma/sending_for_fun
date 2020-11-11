@@ -163,8 +163,32 @@ function doFlow() {
                 // elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 if (elementText.includes("%20")){
                     var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                    var re=new RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g')
+                    tmp_text.replace(re,"-DATE-")    
+                    var re=new RegExp('\\d\\d:\\d\\d:\\d\\d','g') 
+                    tmp_text.replace(re,"-TIME-")    
+                    var re=new RegExp('\\w+\\*\\*\\*','g')
+                    tmp_text.replace(re,"-ACCOUNT-") 
+                    var re=new RegExp('ได้รับ\\dแชมป์ต่อไป','g')
+                    tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป")
+                    var re=new RegExp('\\d+สัปดาห์','g')
+                    tmp_text.replace(re,"-RAND-สัปดาห์")
+                    var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g')
+                    tmp_text.replace(re,"฿-RAND-")
                 }else{
-                    var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");;
+                    var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                    var re=new RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g')
+                    tmp_text.replace(re,"-DATE-")    
+                    var re=new RegExp('\\d\\d:\\d\\d:\\d\\d','g') 
+                    tmp_text.replace(re,"-TIME-")    
+                    var re=new RegExp('\\w+\\*\\*\\*','g')
+                    tmp_text.replace(re,"-ACCOUNT-") 
+                    var re=new RegExp('ได้รับ\\dแชมป์ต่อไป','g')
+                    tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป")
+                    var re=new RegExp('\\d+สัปดาห์','g')
+                    tmp_text.replace(re,"-RAND-สัปดาห์")
+                    var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g')
+                    tmp_text.replace(re,"฿-RAND-")
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
