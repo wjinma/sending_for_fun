@@ -147,7 +147,8 @@ function doFlow() {
                 }
                 if(element_url=="" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
                     if(elementText!="" && !isNaN(Number(elementText))){
-                        continue;
+                        var re=RegExp('\\d+\\.\\d+','g');
+                        elementText=elementText.replace(re,"-RAND-");
                     }
                     
                 }
@@ -175,6 +176,11 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
+                    if(elementClasses.includes("winner|rank")){
+                        tmp_text=tmp_text.replace(/%20/g,"");
+                        var re=RegExp('\\d+\\.\\d+','g');
+                        tmp_text=tmp_text.replace(re,"-RAND-");
+                    }
                     console.log("tmp_text " + tmp_text);
                 }else{
                     var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
@@ -192,7 +198,7 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
                     console.log("tmp_text " + tmp_text);
                 }
-                dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
+                dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");                
                 encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
                 code = data[encoded];
     
