@@ -177,7 +177,7 @@ function doFlow() {
                     var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
                     console.log("elementClasses1 " + elementClasses);
-                    if(elementClasses.includes("winner|rank")){
+                    if(elementClasses.includes("winner")||elementClasses.includes("rank")){
                         console.log("elementClasses1 " + elementClasses);
                         tmp_text=tmp_text.replace(/%20/g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
@@ -199,7 +199,7 @@ function doFlow() {
                     var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
                     console.log("elementClasses2 " + elementClasses);
-                    if(elementClasses.includes("winner|rank")){
+                    if(elementClasses.includes("winner")||elementClasses.includes("rank")){
                         console.log("elementClasses2 " + elementClasses);
                         tmp_text=tmp_text.replace(/ /g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
