@@ -211,7 +211,7 @@ function doFlow() {
                     console.log("tmp_text2 " + tmp_text);
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");                
-                encoded=encodeObj(element_url, elementClasses, elementId, elementText, dataanalyticsID);
+                encoded=encodeObj(element_url, elementClasses, elementId, tmp_text, dataanalyticsID);
                 code = data[encoded];
     
                 if (code != undefined) {
