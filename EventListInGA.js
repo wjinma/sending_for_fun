@@ -177,6 +177,7 @@ function doFlow() {
                     var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
                     if(elementClasses.includes("winner|rank")){
+                        console.log("elementClasses " + elementClasses);
                         tmp_text=tmp_text.replace(/%20/g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
                         tmp_text=tmp_text.replace(re,"-RAND-");
