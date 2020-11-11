@@ -163,33 +163,33 @@ function doFlow() {
                 // elementText=elementText.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                 if (elementText.includes("%20")){
                     var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
-                    var re=new RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g');
-                    tmp_text.replace(re,"-DATE-");    
-                    var re=new RegExp('\\d\\d:\\d\\d:\\d\\d','g'); 
-                    tmp_text.replace(re,"-TIME-");    
-                    var re=new RegExp('\\w+\\*\\*\\*','g');
-                    tmp_text.replace(re,"-ACCOUNT-"); 
-                    var re=new RegExp('ได้รับ\\dแชมป์ต่อไป','g');
-                    tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป");
-                    var re=new RegExp('\\d+สัปดาห์','g');
-                    tmp_text.replace(re,"-RAND-สัปดาห์");
-                    var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g');
-                    tmp_text.replace(re,"฿-RAND-");
+                    var re=RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g');
+                    tmp_text=tmp_text.replace(re,"-DATE-");    
+                    var re=RegExp('\\d\\d:\\d\\d:\\d\\d','g'); 
+                    tmp_text=tmp_text.replace(re,"-TIME-");    
+                    var re=RegExp('\\w+\\*\\*\\*','g');
+                    tmp_text=tmp_text.replace(re,"-ACCOUNT-"); 
+                    var re=RegExp('ได้รับ\\dแชมป์ต่อไป','g');
+                    tmp_text=tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป");
+                    var re=RegExp('\\d+สัปดาห์','g');
+                    tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
+                    var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
+                    tmp_text=tmp_text.replace(re,"฿-RAND-");
                     console.log("tmp_text " + tmp_text);
                 }else{
                     var tmp_text=decodeURIComponent(elementText).replace(/'/g,"-singleQuotePLH-").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
                     var re=new RegExp('\\d\\d\\d\\d/\\d\\d\\/\\d\\d','g');
-                    tmp_text.replace(re,"-DATE-");
+                    tmp_text=tmp_text.replace(re,"-DATE-");
                     var re=new RegExp('\\d\\d:\\d\\d:\\d\\d','g'); 
-                    tmp_text.replace(re,"-TIME-");    
+                    tmp_text=tmp_text.replace(re,"-TIME-");    
                     var re=new RegExp('\\w+\\*\\*\\*','g');
-                    tmp_text.replace(re,"-ACCOUNT-"); 
+                    tmp_text=tmp_text.replace(re,"-ACCOUNT-"); 
                     var re=new RegExp('ได้รับ\\dแชมป์ต่อไป','g');
-                    tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป");
+                    tmp_text=tmp_text.replace(re,"ได้รับ-RAND-แชมป์ต่อไป");
                     var re=new RegExp('\\d+สัปดาห์','g');
-                    tmp_text.replace(re,"-RAND-สัปดาห์");
+                    tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g');
-                    tmp_text.replace(re,"฿-RAND-");
+                    tmp_text=tmp_text.replace(re,"฿-RAND-");
                     console.log("tmp_text " + tmp_text);
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");
@@ -239,4 +239,3 @@ function doFlow() {
         console.log(wjmId+" url: " + wframe.src);
     });
 }
-
