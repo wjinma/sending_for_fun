@@ -118,7 +118,7 @@ function doFlow() {
         case 'www.gembet99vip1.com':
             jsonFileName='gb9_stealSeqJson.json';
             break;
-        case 'www.betcity.mx':
+        case 'www.betlions.mx':
             jsonFileName='bc_stealSeqJson.json';
             break;
         case 'www.chokdee777.com':
