@@ -127,6 +127,9 @@ function doFlow() {
         case 'www.sbfplay99.com':
             jsonFileName='sbf_stealSeqJson.json';
             break;
+        case 'www.huc99.com':
+            jsonFileName='huc_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
