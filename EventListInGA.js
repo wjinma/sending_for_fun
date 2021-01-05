@@ -124,10 +124,16 @@ function doFlow() {
         case 'www.chokdee777.com':
             jsonFileName='cd7_stealSeqJson.json';
             break;
-        case 'www.sbfplay99.com':
+        case 'www.sbfplaybet777.com':
             jsonFileName='sbf_stealSeqJson.json';
             break;
-        case 'www.huc99.com':
+        case 'www.sbfplaybet555.com':
+            jsonFileName='sbf_stealSeqJson.json';
+            break;
+        case 'www.hucbet777.com':
+            jsonFileName='huc_stealSeqJson.json';
+            break;
+        case 'www.hucbet555.com':
             jsonFileName='huc_stealSeqJson.json';
             break;
     }
