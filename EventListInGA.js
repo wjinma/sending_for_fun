@@ -136,6 +136,12 @@ function doFlow() {
         case 'www.hucbet555.com':
             jsonFileName='huc_stealSeqJson.json';
             break;
+        case 'www.jeetbet.com':
+            jsonFileName='jw_stealSeqJson.json';
+            break;
+        case 'www.jeetwin.com':
+            jsonFileName='jw_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
