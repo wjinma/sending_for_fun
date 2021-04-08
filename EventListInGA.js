@@ -142,6 +142,12 @@ function doFlow() {
         case 'www.jeetwin.com':
             jsonFileName='jw_stealSeqJson.json';
             break;
+        case 'www.xda77.com':
+            jsonFileName='xda_stealSeqJson.json';
+            break; 
+        case 'www.ad1.xda77.com':
+            jsonFileName='xda_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
