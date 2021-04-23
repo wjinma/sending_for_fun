@@ -145,7 +145,7 @@ function doFlow() {
         case 'www.xda77.com':
             jsonFileName='xda_stealSeqJson.json';
             break; 
-        case 'www.ad1.xda77.com':
+        case 'ad1.xda77.com':
             jsonFileName='xda_stealSeqJson.json';
             break;
     }
