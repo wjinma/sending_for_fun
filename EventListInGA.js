@@ -165,6 +165,16 @@ function doFlow() {
                 else{
                     var re=RegExp(fullsite_domain,'g');
                     element_url=element_url.replace(re,"");
+                    var re=RegExp('https://download.ocms365.com','g');
+                    elementUrl=elementUrl.replace(re,"");
+                    var re=RegExp('\\?pid.*','g');
+                    elementUrl=elementUrl.replace(re,"");
+                    var re=RegExp('\\?_ga.*','g');
+                    elementUrl=elementUrl.replace(re,"");
+                    var re=RegExp('\\?version.*','g');
+                    elementUrl=elementUrl.replace(re,"");
+                    var re=RegExp('javascript\\:','g');
+                    elementUrl=elementUrl.replace(re,"/");
                 }
                 elementClasses = dataLayer[j]['gtm.elementClasses'];
                 elementId = dataLayer[j]['gtm.elementId'];
@@ -209,9 +219,19 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
+                    var re=RegExp('กระเป๋าสตางค์ \\d+\\.\\d+','g');
+                    tmp_text=tmp_text.replace(re,"กระเป๋าสตางค์-RAND-");
                     if(elementClasses.includes("winner")||elementClasses.includes("rank")){
                         tmp_text=tmp_text.replace(/%20/g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
+                        tmp_text=tmp_text.replace(re,"-RAND-");
+                    }
+                    if(elementClasses=="price"){
+                        var re=RegExp('\\d+\\.\\d+','g');
+                        tmp_text=tmp_text.replace(re,"-RAND-");
+                    }
+                    if(elementClasses=="game-info" || elementClasses=="tabstab"){
+                        var re=RegExp('\\d+','g');
                         tmp_text=tmp_text.replace(re,"-RAND-");
                     }
                 }else{
@@ -228,6 +248,8 @@ function doFlow() {
                     tmp_text=tmp_text.replace(re,"-RAND-สัปดาห์");
                     var re=new RegExp('(฿|฿ )\\d+\\.\\d+','g');
                     tmp_text=tmp_text.replace(re,"฿-RAND-");
+                    var re=RegExp('กระเป๋าสตางค์ \\d+\\.\\d+','g');
+                    tmp_text=tmp_text.replace(re,"กระเป๋าสตางค์-RAND-");
                     if(elementClasses.includes("winner")||elementClasses.includes("rank")){
                         tmp_text=tmp_text.replace(/ /g,"");
                         var re=RegExp('\\d+\\.\\d+','g');
@@ -235,6 +257,14 @@ function doFlow() {
                     }
                     else{
                         tmp_text=tmp_text.replace(/ /g,"%20");
+                    }
+                    if(elementClasses=="price"){
+                        var re=RegExp('\\d+\\.\\d+','g');
+                        tmp_text=tmp_text.replace(re,"-RAND-");
+                    }
+                    if(elementClasses=="game-info" || elementClasses=="tabstab"){
+                        var re=RegExp('\\d+','g');
+                        tmp_text=tmp_text.replace(re,"-RAND-");
                     }
                 }
                 dataanalyticsID=dataanalyticsID.replace(/'/g,"-singleQuotePLH-").replace(/ /g,"%20").replace(/#/g,"-hashMarkPLH-").replace(/\t/g,"-TAB-");                
