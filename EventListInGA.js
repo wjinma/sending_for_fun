@@ -157,6 +157,9 @@ function doFlow() {
         case 'www.promo555.com':
             jsonFileName='pm5_stealSeqJson.json';
             break;
+        case 'www.promo777.com':
+            jsonFileName='pm5_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
