@@ -1,0 +1,20 @@
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ยืนยัน
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ส่ง
+dataanalyticsID=null&element_url==/&elementClasses=form-input&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ล็อคอิน
+dataanalyticsID=gameId-5350&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=กระเป๋าเงินโบนัส
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=เบอร์โทรศัพท์มือถือ
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ศูนย์สมาชิก
+dataanalyticsID=null&element_url==/&elementClasses=qrcodeLogin-wraper&elementId=&elementText=สแกนล็อกอิน
+dataanalyticsID=promotionInfoId-100&element_url==/&elementClasses=&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/&elementClasses=overlay-mask&elementId=&elementText=กำลังดำเนินการ...
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=JILI
+dataanalyticsID=null&element_url==/&elementClasses=nuxt-link-exact-active nuxt-link-active&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ลงทะเบียน
+dataanalyticsID=null&element_url==/&elementClasses=dark-close&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=เกมยอดนิยม
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=rememberMe&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=poperrorMsg&elementId=&elementText=ต้องการรหัสยืนยัน
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=รหัสยืนยัน
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=qrcodeLogin&elementText=

@@ -1,0 +1,20 @@
+dataanalyticsID=null&element_url==/promotion&elementClasses=&elementId=&elementText=
+dataanalyticsID=promotionInfoId-100&element_url==/&elementClasses=&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/&elementClasses=dark-close&elementId=&elementText=
+dataanalyticsID=promotionInfoId-102&element_url==/&elementClasses=&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/&elementClasses=btn more-btn&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/&elementClasses=mob-friendlink-nav-social&elementId=&elementText=LINE
+dataanalyticsID=null&element_url==/&elementClasses=form-input&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=canvas&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ยืนยัน
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=โปรโมชั่น
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=PG
+dataanalyticsID=null&element_url==/&elementClasses=popup-close-btn&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ลงทะเบียน
+dataanalyticsID=gameId-14&element_url==/&elementClasses=&elementId=&elementText=DEMO
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=PT
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=JOKER
+dataanalyticsID=promotionInfoId-100&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/slotgame&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=register-btn&elementId=&elementText=สมัคร

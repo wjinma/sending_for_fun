@@ -1,0 +1,20 @@
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=เกม
+dataanalyticsID=null&element_url==/promotion&elementClasses=&elementId=&elementText=
+dataanalyticsID=gameId-30097&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=PG
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=JDB
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=PP
+dataanalyticsID=null&element_url==/&elementClasses=btn more-btn&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/livegame&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=dark-close&elementId=&elementText=
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=FCR
+dataanalyticsID=gameId-3754&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=popup-close-btn&elementId=&elementText=
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=โต๊ะเกมส์เสมือนจริง
+dataanalyticsID=null&element_url==/&elementClasses=el-notification__closeBtn el-icon-close&elementId=&elementText=
+dataanalyticsID=null&element_url==/v2/common/Platform.35.4&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=platform-menu-img&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=msg-content overflowContent blockContent&elementId=&elementText=บริการระดับ VIP ตลอด 24 ชั่วโมง ที่ ไลน์ไอดี @wwluck03 (ใส่ @ ด้วยนะคะ)
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=ISB
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=CQ9
+dataanalyticsID=null&element_url==/&elementClasses=deposit-btn&elementId=&elementText=CASH CENTER

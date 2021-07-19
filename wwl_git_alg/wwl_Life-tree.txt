@@ -1,0 +1,20 @@
+dataanalyticsID=promotionInfoId-100&element_url==/&elementClasses=&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/void(0)&elementClasses=&elementId=&elementText=SG
+dataanalyticsID=null&element_url==/&elementClasses=platform-menu-img&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ยืนยัน
+dataanalyticsID=null&element_url==/promotion&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=btn more-btn&elementId=&elementText=MORE
+dataanalyticsID=null&element_url==/&elementClasses=loading-bg&elementId=loadingBlock&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=dark-close&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=rememberMe&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=register-btn&elementId=&elementText=สมัคร
+dataanalyticsID=null&element_url==/&elementClasses=equal-block&elementId=&elementText=สมัคร ไอดี ชื่อ นามสกุล เบอร์โทรศัพท์มือถือ อีเมล ไอดีผู้แนะนำ รหัสยืนยัน ข้าพเจ้าเห็นด้วยเงื่อนไขและข้อตกลงของ WWLuck ลงทะเบียน กลับหน้าล็อกอิน
+dataanalyticsID=null&element_url==/&elementClasses=signin-btn&elementId=&elementText=ล็อคอิน
+dataanalyticsID=null&element_url==/slotgame&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=customer-swiper-button-next&elementId=&elementText=NEXT
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=หน้าหลัก
+dataanalyticsID=null&element_url==/&elementClasses=form-input&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ลงทะเบียน
+dataanalyticsID=null&element_url==/&elementClasses=&elementId=&elementText=ล็อคอิน
+dataanalyticsID=promotionInfoId-100&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=gameId-955&element_url==/&elementClasses=&elementId=&elementText=DEMO

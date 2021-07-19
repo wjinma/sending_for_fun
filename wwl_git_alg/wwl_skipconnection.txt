@@ -1,0 +1,20 @@
+dataanalyticsID=gameId-10453&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=null&element_url==/v2/common/FC/PlatformGameList.8768_4&elementClasses=&elementId=&elementText=
+dataanalyticsID=gameId-4931&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=gameId-9226&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=el-swiper-item-content&elementId=&elementText=ไลน์สำรอง
+dataanalyticsID=gameId-4861&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=btn-refresh&elementId=&elementText=
+dataanalyticsID=gameId-4686&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=null&element_url==/&elementClasses=hall-btn&elementId=&elementText=
+dataanalyticsID=gameId-10311&element_url==/&elementClasses=&elementId=&elementText=DEMO
+dataanalyticsID=null&element_url==/&elementClasses=form-content&elementId=&elementText=ไอดี ชื่อ ยืนยันชื่อผิด นามสกุล เบอร์โทรศัพท์มือถือ อีเมล ไอดีผู้แนะนำ รหัสยืนยัน ต้องการรหัสยืนยัน ข้าพเจ้าเห็นด้วยเงื่อนไขและข้อตกลงของ WWLuck ลงทะเบียน กลับหน้าล็อกอิน
+dataanalyticsID=null&element_url==/v2/common/PS/PlatformGameList.6075_4&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/v2/common/JDB/PlatformGameList.27_4&elementClasses=&elementId=&elementText=
+dataanalyticsID=gameId-6124&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=gameId-12125&element_url==/&elementClasses=&elementId=&elementText=DEMO
+dataanalyticsID=gameId-6&element_url==/&elementClasses=&elementId=&elementText=
+dataanalyticsID=null&element_url==/&elementClasses=active&elementId=&elementText=โปรโมชั่นแพลตฟอร์มเกม
+dataanalyticsID=gameId-10390&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
+dataanalyticsID=null&element_url==/&elementClasses=el-dialog__wrapper dialog-fade-leave dialog-fade-leave-active&elementId=&elementText=ดาวน์โหลดAPP คลิ๊กและดาวโหลดแอพ
+dataanalyticsID=gameId-2881&element_url==/&elementClasses=&elementId=&elementText=PLAY REAL
