@@ -112,29 +112,11 @@ function doFlow() {
         case 'www.siam99.com':
             jsonFileName='si_stealSeqJson.json';
             break;
-        case 'www.chanabet555.com':
-            jsonFileName='cb5_stealSeqJson.json';
-            break;
-        case 'www.gembet99vip1.com':
-            jsonFileName='gb9_stealSeqJson.json';
-            break;
-        case 'www.betlions.mx':
-            jsonFileName='bc_stealSeqJson.json';
+        case 'www.siam99th.com':
+            jsonFileName='si_stealSeqJson.json';
             break;
         case 'www.chokdee777.com':
             jsonFileName='cd7_stealSeqJson.json';
-            break;
-        case 'www.sbfplaybet777.com':
-            jsonFileName='sbf_stealSeqJson.json';
-            break;
-        case 'www.sbfplaybet555.com':
-            jsonFileName='sbf_stealSeqJson.json';
-            break;
-        case 'www.hucbet777.com':
-            jsonFileName='huc_stealSeqJson.json';
-            break;
-        case 'www.hucbet555.com':
-            jsonFileName='huc_stealSeqJson.json';
             break;
         case 'www.jeetbet.com':
             jsonFileName='jw_stealSeqJson.json';
@@ -159,6 +141,9 @@ function doFlow() {
             break;
         case 'www.promo777.com':
             jsonFileName='pm5_stealSeqJson.json';
+            break;
+        case 'www.thbet99.com':
+            jsonFileName='tb9_stealSeqJson.json';
             break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
