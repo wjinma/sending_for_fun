@@ -145,6 +145,9 @@ function doFlow() {
         case 'www.thbet99.com':
             jsonFileName='tb9_stealSeqJson.json';
             break;
+        case 'www.bonus99.com':
+            jsonFileName='tb9_stealSeqJson.json';
+            break;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
