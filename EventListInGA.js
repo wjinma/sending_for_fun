@@ -154,6 +154,10 @@ function doFlow() {
         case 'www.bonus99.com':
             jsonFileName='tb9_stealSeqJson.json';
             break;
+        case 'www.sfc588.com':
+            return undefined;
+        case 'www.panalo999.com':
+            return undefined;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
