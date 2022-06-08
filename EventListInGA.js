@@ -131,10 +131,10 @@ function doFlow() {
             jsonFileName='xda_stealSeqJson.json';
             break;
         case 'www.xda77mmk.com':
-            jsonFileName='xda_stealSeqJson.json';
+            jsonFileName='xdammk_stealSeqJson.json';
             break;
         case 'mm.xda77.com':
-            jsonFileName='xda_stealSeqJson.json';
+            jsonFileName='xdammk_stealSeqJson.json';
             break;
         case 'www.topthaiplay.com':
             jsonFileName='ttp_stealSeqJson.json';
@@ -155,9 +155,12 @@ function doFlow() {
             jsonFileName='tb9_stealSeqJson.json';
             break;
         case 'www.sfc588.com':
-            return undefined;
+            jsonFileName='sfc_stealSeqJson.json';
+            break;
         case 'www.panalo999.com':
-            return undefined;
+            jsonFileName='pn9_stealSeqJson.json';
+            break;
+            //return undefined;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
         eList = [];
