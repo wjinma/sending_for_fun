@@ -160,6 +160,9 @@ function doFlow() {
         case 'www.panalo999.com':
             jsonFileName='pn9_stealSeqJson.json';
             break;
+        case 'www.jiliko.com':
+            jsonFileName='_stealSeqJson.json';
+            break;
             //return undefined;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
