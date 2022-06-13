@@ -161,7 +161,7 @@ function doFlow() {
             jsonFileName='pn9_stealSeqJson.json';
             break;
         case 'www.jiliko.com':
-            jsonFileName='_stealSeqJson.json';
+            jsonFileName='jlk_stealSeqJson.json';
             break;
             //return undefined;
     }
