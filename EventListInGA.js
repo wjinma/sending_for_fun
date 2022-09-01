@@ -169,6 +169,10 @@ function doFlow() {
         case 'www.mcwdeportes.mx':
             jsonFileName='mcw_stealSeqJson.json';
             break;
+        case 'www.mxndeportes.mx':
+            jsonFileName='mcw_stealSeqJson.json';
+            break;
+            
             //return undefined;
     }
     readTextFile("https://wjinma.github.io/sending_for_fun/" + jsonFileName + "?_=" + new Date().getTime(), function(text) {
